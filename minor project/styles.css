@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
+    color: #333;
+}
+
+/* Header and Footer Styles */
+header, footer {
+    background: linear-gradient(120deg, #0F2027, #203A43, #2C5364);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    padding-top: 80px; /* Space for the fixed header */
+    padding-bottom: 60px; /* Space for the fixed footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historical-places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Individual Place Styles */
+.place {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.place:hover {
+    transform: translateY(-5px);
+}
+
+.place img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.place p {
+    padding: 15px;
+    text-align: justify;
+    background-color: #f9f9f9;
+}
